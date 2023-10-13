@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://vitalife-new-backend.onrender.com/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
@@ -16,7 +16,7 @@
     "react-icons": "^4.3.1",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.16.0",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.0",
     "react-toastify": "^8.1.1"
   },
   "scripts": {
