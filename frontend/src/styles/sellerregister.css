@@ -1,0 +1,52 @@
+.sellerregister{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sellerregister-form{
+    box-shadow: 0.0625em 0.0625em 0.625em grey;
+    border-radius:  1.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 20%;
+    padding:  1.25em;
+}
+
+.sellerregister-details{
+    padding: 0.625em;
+    width: 70%;
+    border: none;
+    box-shadow: 0.0625em 0px 0.3125em #d0cdcd;
+    border-radius:  1.25em;
+}
+
+.sellerregisterBtn{
+    margin-top: 1.875em;
+    padding: 0.625em;
+    width: 40%;
+    border: none;
+    border-radius:  1.25em;
+}
+
+.sellerregisterBtn:hover{
+    background-color: green;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+@media screen and (max-width:376px){
+    .sellerregister{
+        text-align: center;
+    }
+    .sellerregister-form{
+        width: 80%;
+    }
+}

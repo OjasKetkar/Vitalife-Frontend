@@ -1,0 +1,166 @@
+html,body{
+    overflow-x: hidden;
+}
+
+.home{
+    height: 130vh;
+    width: 100vw;
+    /* margin-top: 1%; */
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+.parallax-container {
+    height: 100vh; 
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    overflow-x: hidden;
+}
+.home-top {
+    height: 100%;
+    background-image: url('../utils/bg3.png');
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden; /* Hide overflow to prevent content from showing initially */
+}
+
+/* Styles for the content within home-top */
+.top-container {
+    color: transparent; /* Make the content initially transparent */
+    text-align: left;
+    font-family: 'Unna', serif;
+    margin-right: 40%;
+    animation: fadeInFromRight 1s ease-in-out forwards; /* Add the animation */
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInFromRight {
+    0% {
+        transform: translateX(100%); /* Start off the screen to the right */
+        opacity: 0; /* Transparent initially */
+    }
+    100% {
+        transform: translateX(0); /* Move to the original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Additional styles for the content */
+.home-header {
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 2%;
+    color: white;
+    margin-left: 15%;
+}
+
+.home-header:hover {
+    cursor: pointer;
+}
+
+.home-tagline {
+    font-size: 2em;
+    margin-top: 0;
+    color: white;
+    width: 70%;
+    margin: 0 auto
+}
+
+.homeBtn {
+    margin-top: 1.875em;
+    padding: 0.625 1025em;
+    margin-left: 15%;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3125;
+    background-color: green;
+    font-weight: bold;
+    animation: slideInFromRight 1s ease-in-out forwards; /* Add the animation */
+}
+
+/* Keyframes for the button animation */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%); /* Start off the screen to the right */
+    }
+    100% {
+        transform: translateX(0); /* Move to the original position */
+    }
+}
+
+.homeBtn:hover {
+    cursor: pointer;
+    color: #46b801;
+    background-color: white;
+}
+
+.home-bottom{
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.home-boxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.6250em;
+    color: grey;
+}
+
+.home-svgs{
+    width: 8%;
+    margin-right: 3%;
+}
+
+h3{
+    margin-bottom: 0;
+    color: black;
+}
+
+p{
+    margin-top: 0;
+}
+
+@media only screen and (max-width:768px){
+    .home{
+        background-size: cover;
+    }
+
+    .top-container{
+        font-size: 0.8em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 35%;
+        margin-top: 20%;
+    }
+
+    .home-tagline{
+        margin-left: 20%;
+    }
+
+
+    .home-bottom{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* padding-top: 20%; */
+    }
+
+
+}

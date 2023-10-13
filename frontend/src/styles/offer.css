@@ -1,0 +1,192 @@
+.offer {
+  height: auto; /* Remove fixed height */
+  width: 100vw;
+  display: flex; /* Use flex to create a horizontal row */
+  flex-direction: column; /* Change to a column layout for smaller screens */
+  align-items: center;
+  margin-bottom: 6.25em;
+}
+
+.offer-topline {
+  text-align: center;
+  padding:  1.25em;
+  font-size: 1.2em;
+}
+
+.offer-tagline {
+  /* font-size: 36px; */
+  margin-bottom:  1.25em;
+}
+
+.offer-headline {
+  font-size: 2.5em;
+  margin-bottom: 0.625em;
+  font-family: 'Unna', serif;
+}
+
+.offer-main {
+  font-size: 1.125em;
+  margin-bottom:  1.25em;
+}
+
+.latest-products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:  1.25em;
+}
+
+.offer-card-container {
+  position: relative;
+  width: 15.625em;
+  border: 0.0625em solid #ccc;
+  border-radius: 0.3125em;
+  margin: 1.875em;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card-image {
+  overflow: hidden; /* Ensure the image stays within the card container */
+}
+
+.card-image img {
+  width: 100%; /* Set the image width to 100% to cover the entire card */
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.offercard-details {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 0.625em;
+  box-shadow: 0px 0px 0.625em rgba(0, 0, 0, 0.2);
+  transition: bottom 0.3s;
+}
+
+.offer-card-container:hover {
+  transform: translateY(-0.625em);
+  cursor: pointer;
+}
+
+.offer-card-container:hover .offercard-details {
+  cursor: pointer;
+  bottom: 0;
+}
+
+.offer-card-container:hover .card-image img {
+  cursor: pointer;
+  transform: scale(1.1);
+  opacity: 50%;
+}
+
+.offercard-name {
+  font-size: 2em;
+  margin: 0.625em 0;
+  font-weight: bold;
+  color: grey;
+}
+
+.offercard-description {
+  font-size: 1em;
+  margin: 0.625em 0;
+}
+
+
+.shopnow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8%;
+}
+
+.shopnow-header{
+  font-size: 2.5em;
+  font-family: 'Unna', serif;
+}
+.shopnow-tagline{
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.shopnow-para{
+  margin: 0.625em 0 2.5em 0;
+}
+
+.shopnowBtn{
+  width: 30%;
+  padding: 2%;
+  border: none;
+  border-radius: 0.625em;
+  background-color: #e9ab26;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.shopnowBtn:hover{
+  cursor: pointer;
+  background-color: white;
+  color: #e9ab26;
+}
+
+.shopnow-right{
+  margin: 3.125em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: grey; */
+}
+
+.shopnow-image{
+  width: 45%;
+}
+
+@media screen and (max-width:768px){
+  .offer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .shopnow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    width: 100%;
+  }
+
+  .shopnow-image{
+    display: none;
+  }
+
+  .offer-card-container {
+    position: relative;
+    width: 8.625em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.3125em;
+    margin: 1.875em;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+
+  .shopnowBtn{
+    width: 100%;
+  }
+
+  .offer-card-container{
+    width: 50%;
+  }
+
+  .offercard-image{
+    width: 30%;
+  }
+}
+

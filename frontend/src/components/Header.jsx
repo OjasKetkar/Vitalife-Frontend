@@ -2,6 +2,10 @@ import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice'
+import mainlogo from '../utils/Mainlogo.png'
+import { useEffect, useState } from 'react'
+import '../styles/header.css'
+import menu from "../utils/menu.svg"
 
 function Header() {
   const navigate = useNavigate()
@@ -14,20 +18,44 @@ function Header() {
     navigate('/')
   }
 
+
   return (
+    <>
+      {/* <Sidebar/> */}
     <header className='header'>
-      <div className='logo'>
-        <Link to='/'>GoalSetter</Link>
+      <div className="nav-left">
+                <img src={mainlogo} alt="main logo" className='mainlogo' />
+                <h1 className='mainname'>VitaLife</h1>
       </div>
-      <ul>
+      
+      <ul className='header-right'>
+        <img src={menu} alt="menu" className='menu'/>
+        
         {user ? (
+
+          <>
+          <ul className='header-list'>
+          <li className="header-options"><Link to='/home'className="nav-options">Home</Link></li>
+          <li className="header-options"><Link to='/nav/catalogue'  className="nav-options">Catalogue</Link></li>
+          <li className="header-options"><Link to='/forums'  className="nav-options">Forums</Link></li>
+          <li className="header-options"><Link to='/nav/sell' className="nav-options">Sell</Link></li>
+          <li className="header-options"><Link to='/home' className="nav-options">Contact</Link></li>
           <li>
             <button className='btn' onClick={onLogout}>
-              <FaSignOutAlt /> Logout
+              <FaSignOutAlt /> Logout 
             </button>
           </li>
+          </ul>
+          </>
+          
         ) : (
           <>
+          <ul className='header-list'>
+          <li className="nav-options"><Link to='/home'className="nav-options">Home</Link></li>
+                <li className="nav-options"><Link to='/nav/catalogue'  className="nav-options">Catalogue</Link></li>
+                <li className="nav-options"><Link to='/forums'  className="nav-options">Forums</Link></li>
+                <li className="nav-options"><Link to='/nav/sell'  className="nav-options">Sell</Link></li>
+                <li className="nav-options"><Link to='/home' className="nav-options">Contact</Link></li>
             <li>
               <Link to='/login'>
                 <FaSignInAlt /> Login
@@ -38,10 +66,14 @@ function Header() {
                 <FaUser /> Register
               </Link>
             </li>
+            </ul>
           </>
         )}
       </ul>
+
+
     </header>
+    </>
   )
 }
 

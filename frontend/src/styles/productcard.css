@@ -1,0 +1,192 @@
+/* productcard.css */
+.productcard {
+    position: relative;
+    padding: 1.875em;
+    /* border: 0.0625em solid #ddd; */
+    background-color: #e2ebe1;
+    width: 2 1.25em;
+    text-align: center;
+    border-radius: 1.875em;
+  }
+  
+  .productcard-image {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .infoCircle-img{
+    width: 25%;
+  }
+
+  .infoCircle-img:hover{
+    cursor: pointer;
+  }
+
+  /* .productCard-bottom{
+    display: flex;
+    align-items: center;
+  } */
+  
+  .login-popup, .bill-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding:  1.25em;
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px; /* Adjust the width as needed */
+    border-radius: 0.625em;
+  }
+
+  .login-popup{
+    width: 20%;    
+    /* background-color: green; */
+  }
+  
+  .popup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .stockamount {
+    width: 100%;
+    margin-bottom: 0.625em;
+    margin-top: 0;
+    padding: 0.3125em;
+    border: 0.0625em solid #ddd;
+    border-radius: 0.3125em;
+  }
+  
+  .productBtn {
+    width: 50%;
+    padding: 0.625em;
+    border: none;
+    background-color: #008000;
+    color: white;
+    border-radius: 0.625em;
+    cursor: pointer;
+  }
+  
+  .productBtn:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .productdetails {
+    margin: 0;
+  }
+
+  .productheader{
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  .loginpopup-details{
+    margin:  1.25em 0;
+    width: 80%;
+    padding: 0.625em;
+    border-radius:  1.25em;
+    border: none;
+    box-shadow: 0.0625em 0 0.3125em #d0cdcd;
+  }
+
+  .loginpopupBtn{
+    width: 50%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.625em;
+    background-color: rgb(41, 41, 255);
+    color: white;
+  }
+
+  .loginpopupBtn:hover{
+    cursor: pointer;
+    background-color: rgb(26, 19, 173);
+  }
+  
+  .loginpopupBtn-register{
+      width: 100%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.625em;
+    background-color: rgb(41, 41, 255);
+    color: white;
+}
+
+.loginpopupBtn-register:hover{
+  cursor: pointer;
+  background-color: rgb(26, 19, 173);
+}
+  .loginpopup-header{
+    margin: 0.625em 0.3125em;
+}
+
+.loginpopupBtn-close{
+    width: 50%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.625em;
+  }
+  
+  .loginpopupBtn-close:hover{
+    background-color: rgb(255, 41, 41);
+    color: white;
+    cursor: pointer;
+}
+
+.billpopupBtn{
+    width: 100%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.625em;
+    background-color: rgb(255, 41, 41);
+    color: white;
+}
+
+.billpopupBtn:hover{
+    cursor: pointer;
+}
+
+.showloginerror{
+    margin: 0.625em 0.3125em;
+    color: red;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:768px){
+  .productcard{
+    width: 80%;
+  }
+
+  .login-popup{
+    width:80%;
+  }
+  .loginpopup-header{
+    margin: 0.625em 0.3125em;
+}
+
+.loginpopupBtn-close{
+    width: 50%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.625em;
+  }
+  
+  .loginpopupBtn-close:hover{
+    background-color: rgb(255, 41, 41);
+    color: white;
+    cursor: pointer;
+}
+
+}
+
+
+  

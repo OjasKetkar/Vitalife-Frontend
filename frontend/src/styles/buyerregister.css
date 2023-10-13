@@ -1,0 +1,49 @@
+.buyerregister{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buyerregister-form{
+    /* background-color: gray; */
+    /* border: 0.0625em solid grey; */
+    height: 60%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    border-radius: 10.3125em;
+    box-shadow: 0.0625em 0.0625em 0.625em grey;
+}
+
+.buerregisterform-details{
+    width: 60%;
+    padding: 0.625em;
+    /* border-color: rgb(216, 213, 213); */
+}
+
+.buerregisterformBtn{
+    margin-top: 10%;
+    padding: 0.625em;
+    width: 30%;
+    border: none;
+    background-color: green;
+    font-weight: bold;
+    color: white;
+    border-radius:  1.25em;
+}
+
+.buerregisterformBtn:hover{
+    cursor: pointer;
+    background-color: rgb(26, 161, 26);
+
+}
+
+@media screen and (max-width:376px){
+    .buyerregister-form{
+        width: 80%;
+    }
+}

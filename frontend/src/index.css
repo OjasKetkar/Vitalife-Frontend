@@ -32,14 +32,14 @@ h1,
 h2,
 h3 {
   font-weight: 600;
-  margin-bottom: 10px;
+  /* margin-bottom: 0.625em; */
 }
 
 .container {
   width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+  /* max-width: 93.75em; */
+  /* margin: 0 auto; */
+  /* padding: 0  1.25em; */
   text-align: center;
 }
 
@@ -47,101 +47,71 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
-  border-bottom: 1px solid #e6e6e6;
-  margin-bottom: 60px;
-}
-
-.header ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header ul li {
-  margin-left: 20px;
-}
-
-.header ul li a {
-  display: flex;
-  align-items: center;
-}
-
-.header ul li a:hover {
-  color: #777;
-}
-
-.header ul li a svg {
-  margin-right: 5px;
-}
-
-.heading {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 50px;
-  padding: 0 20px;
-}
-
-.heading p {
-  color: #828282;
+  border-bottom: 0.0625em solid #e6e6e6;
+  margin-bottom: 3.75em;
+  margin-top: 3.125em;
 }
 
 .goals {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 0.625em;
 }
 
 .goal {
   background-color: #f4f4f4;
-  margin: 10px 0;
-  padding: 20px 0 10px;
+  margin: 0.625em 0;
+  padding:  1.25em 0 0.625em;
   position: relative;
 }
 
 .goal .close {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 0.625em;
+  right: 10.3125em;
   cursor: pointer;
   border: none;
   background: none;
 }
 
+.heading{
+  margin-top: 6%;
+}
+
 .form,
 .content {
-  width: 70%;
+  width: 30%;
   margin: 0 auto;
 }
 
 .form-group {
-  margin-bottom: 10px;
+  margin-bottom: 0.625em;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #e6e6e6;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  padding: 0.625em;
+  border: 0.0625em solid #e6e6e6;
+  border-radius: 0.3125em;
+  margin-bottom: 0.625em;
   font-family: inherit;
 }
 
 .form-group label {
   text-align: left;
   display: block;
-  margin: 0 0 5px 3px;
+  margin: 0 0 0.3125em 0.1875em;
 }
 
 .btn {
-  padding: 10px 20px;
-  border: 1px solid #000;
-  border-radius: 5px;
+  padding: 0.625em  1.25em;
+  border: 0.0625em solid #000;
+  border-radius: 0.3125em;
   background: #000;
   color: #fff;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 700;
   cursor: pointer;
   text-align: center;
@@ -152,7 +122,7 @@ h3 {
 }
 
 .btn svg {
-  margin-right: 8px;
+  margin-right: 0.5em;
 }
 
 .btn-reverse {
@@ -162,7 +132,7 @@ h3 {
 
 .btn-block {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom:  1.25em;
 }
 
 .btn:hover {
@@ -183,9 +153,9 @@ h3 {
 }
 
 .loadingSpinner {
-  width: 64px;
-  height: 64px;
-  border: 8px solid;
+  width: 5.875em;
+  height: 5.875em;
+  border: 0.5em solid;
   border-color: #000 transparent #555 transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
@@ -200,9 +170,13 @@ h3 {
   }
 }
 
-@media (max-width: 600px) {
-  .form {
-    width: 90%;
+@media only screen and (max-width: 768px) {
+  .form{
+    width: 60%;
+  }
+
+  .heading{
+    margin-top: 10%;
   }
 
   .heading h1 {

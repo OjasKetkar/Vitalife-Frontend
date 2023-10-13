@@ -1,0 +1,97 @@
+.sell{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    background-image: url('../utils/p2.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sell-headline{
+    color: white;
+    font-family: 'Unna', serif;
+}
+
+.product-form{
+    /* border: 0.0625em solid black; */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:  1.25em;
+    border-radius: 5%;
+    box-shadow: 0.0625em 0 0.3125em #929292;
+    background-color: white;
+}
+
+.sell-inputs{
+    width: 80%;
+    border: none;
+    padding: 0.625em;
+    border-radius:  1.25em;
+    margin: 3% 0;
+}
+
+.sell-inputs:hover{
+    border: green 0.0625em solid;
+    cursor: pointer;
+}
+
+.submitBtn{
+    padding: 0.625em;
+    width: 30%;
+    border: none;
+    border-radius:  1.25em;
+    font-weight: bold;
+}
+
+.submitBtn:hover{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}
+
+.sell-receipt{
+    border: 0.0625em solid black;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding:  1.25em;
+    border-radius: 5%;
+    background-color: #fff;
+}
+
+.receipt-details{
+    margin:  1.25em 0;
+}
+
+.receiptBtn{
+    padding: 0.625em;
+    width: 30%;
+    border: none;
+    border-radius:  1.25em;
+    font-weight: bold;
+}
+
+.receiptBtn:hover{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}
+
+@media screen and (max-width:768px){
+    .product-form{
+        width: 50%;
+    }  
+
+    .sell-receipt{
+        width: 50%;
+    }
+}

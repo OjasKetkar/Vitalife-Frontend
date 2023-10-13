@@ -1,0 +1,81 @@
+/* Style for the vertical tab layout */
+.popup {
+    display: flex;
+    width: 100%; /* You can adjust the width as needed */
+    font-family: Arial, sans-serif;
+    padding: 1% 10% 5% 10%;
+  }
+  
+
+  
+  .fixed-pane {
+    width: 200px; /* Fixed width for the left pane */
+    overflow-y: auto;
+    /* border-right: 1px solid #ccc; */
+    background: #f0f0f0; /* Background color for the fixed pane */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; 
+  }
+  
+  .tabs {
+    max-height: 550px; /* Set a maximum height for scrollbars */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  
+  .tab-label {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .tab-label:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .tab-label.active {
+    background-color: green; /* Active tab background color */
+    color: white;
+  }
+  
+  .tab-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .herb-content {
+    display: none;
+    margin: 0 auto;
+    width: 40%;
+    max-height: 90%;
+  }
+  
+  .herb-content-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1;
+    background-color: #c7f1c7;
+
+  }
+
+  .herb-description{
+  }
+
+    /* Style for the herb images */
+    .info-image {
+      max-width: 100%; /* Adjust to your preferred width */
+      height: auto;
+    }
+    .info-image-container {
+      max-width: 100%; /* Adjust to your preferred width */
+      height: auto;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+    }
+  
+  .herb-content.active {
+    display: block;
+  }
+  

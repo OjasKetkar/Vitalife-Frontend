@@ -1,0 +1,138 @@
+.testimonial {
+    height: 150vh;
+    width: 100vw;
+    margin-bottom: 2.25em;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.25em;
+    padding: 3.75em;
+    border-radius: 0.625em;
+}
+
+.testimonial-header {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Unna', serif;
+}
+
+.testimonial-tagline {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.person {
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25em;
+    text-align: center;
+    border-radius: 1.875em;
+    box-shadow: 0 0 0.625em #00000033;
+    width: 80%;
+    position: relative; /* Added position relative */
+}
+
+.person:hover {
+    color: white;
+    font-weight: bold;
+    background-color: #46b801;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+
+.person-image {
+    width: 18.125em;
+    height: 18.125em;
+    margin-bottom: 1.3125em;
+}
+
+.person p,
+.person h4 {
+    display: none; /* Hide the text initially */
+}
+
+.person:hover p,
+.person:hover h4 {
+    display: block; /* Show the text on hover */
+}
+
+.person1 {
+    background-image: url('../utils/person1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.person2 {
+    background-image: url('../utils/person2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.person3 {
+    background-image: url('../utils/person3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.person4 {
+    background-image: url('../utils/person4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.person5 {
+    background-image: url('../utils/person5.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.person6 {
+    background-image: url('../utils/person6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h4 {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .testimonial {
+        height: 120vh;
+    }
+
+    .person {
+        width: 40%;
+    }
+
+    .person-image {
+        width: 15.125em;
+        height: 15.125em;
+        margin-bottom: 1.3125em;
+    }
+
+    .person3,
+    .person4,
+    .person5,
+    .person6 {
+        display: none;
+    }
+}

@@ -1,0 +1,36 @@
+.forumcard{
+    padding: 0.625em;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    opacity: 8;
+}
+
+.forumcard-image{
+    height: max-content;
+}
+
+.forumcard-content{
+    margin-left: 5%;
+}
+
+.forum-header{
+    color: rgb(97, 97, 97);
+    font-weight: bold;
+}
+
+.forumuploadBtn{
+    display: none;
+}
+
+@media screen and (max-width:376px){
+    .forumuploadBtn{
+        display: block;
+    }
+
+    .forumcard-image{
+        display: none;
+    }
+
+    
+}
