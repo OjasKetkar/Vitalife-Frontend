@@ -5,10 +5,12 @@ import Spinner from '../components/Spinner'
 import { getGoals, reset } from '../features/goals/goalSlice'
 import Catalogue from './Catalogue.js'
 import Sell from './Sell.js'
+import Forums from './Forums'
 
 function Dashboard({type}) {
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  
 
   const { user } = useSelector((state) => state.auth)
   const { goals, isLoading, isError, message } = useSelector(
@@ -39,11 +41,15 @@ function Dashboard({type}) {
     <>
     
       {/* <section className='heading'>
-        <h1>Welcome {user && user.name}</h1>
       </section> */}
 
-      {type == "catalogue" ? <Catalogue/> : null}
-      {type == "sell" ? <Sell/> : null}
+        {/* <h1>Welcome {user && user.name}</h1> */}
+
+
+        {type === "catalogue" ? <Catalogue Username={user ? user.name : null} /> : null}
+        {type === "sell" ? <Sell Username={user ? user.name : null} /> : null}
+        {type === "forums" ? <Forums LoggedIn={!!user} /> : null}
+
 
 
 

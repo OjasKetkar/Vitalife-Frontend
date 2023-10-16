@@ -4,7 +4,7 @@ import ForumCard from '../components/ForumCard';
 import '../styles/forums.css';
 import { toast, ToastContainer } from 'react-toastify';
 
-export default function Forums() {
+export default function Forums(props) {
   const [searchQuery, setSearchQuery] = useState('');
   const [forumData, setForumData] = useState([]);
   const [totalTweetCount, setTotalTweetCount] = useState(0);
@@ -14,8 +14,6 @@ export default function Forums() {
     forumContent: '',
     forumAuth: '',
     forumDate: '',
-    forumReplies: '',
-    forumId: ''
   });
 
   const toggleFormVisibility = () => {
@@ -26,7 +24,7 @@ export default function Forums() {
     setSearchQuery(e.target.value);
   };
 
-  const checkWindowWidth = () => {
+  const handleResize = () => {
     if (window.innerWidth > 376) {
       setShowForm(true);
     } else {
@@ -35,60 +33,35 @@ export default function Forums() {
   };
 
   useEffect(() => {
-    // Fetch forum data from your API when the component mounts
-    fetch('https://vitalife-api.onrender.com/getAllForums')
-      .then((response) => response.json())
-      .then((data) => {
-        setForumData(data.data);
-      })
-      .catch((error) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://vitalife-api.onrender.com/getAllForums');
+        if (response.ok) {
+          const data = await response.json();
+          setForumData(data.data);
+          setTotalTweetCount(data.data.length);
+        } else {
+          console.error('Error fetching forum data:', response.statusText);
+        }
+      } catch (error) {
         console.error('Error fetching forum data:', error);
-      });
+      }
+    };
 
-    // Calculate total tweet count from the forum data
-    setTotalTweetCount(forumData.length);
+    fetchData();
 
     // Add a listener for window resize events
-    window.addEventListener('resize', checkWindowWidth);
-
-    // Initial check for window width
-    checkWindowWidth();
+    window.addEventListener('resize', handleResize);
 
     // Cleanup the listener when the component unmounts
     return () => {
-      window.removeEventListener('resize', checkWindowWidth);
+      window.removeEventListener('resize', handleResize);
     };
-  }, [forumData]);
+  }, []);
 
   const handleInputs = (e) => {
     const { name, value } = e.target;
     setForum((prevForum) => ({ ...prevForum, [name]: value }));
-  };
-
-  const handleReplySubmit = async (e, forumId) => {
-    const { forumReplies } = forum;
-
-    try {
-      const res = await fetch(`https://vitalife-api.onrender.com/forumReply/${forumId}`, {
-        method: 'PUT',
-        mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ forumReplies }),
-      });
-
-      if (res.status === 200) {
-        toast.success('Reply submitted successfully');
-        console.log('Reply submitted successfully');
-        window.location.reload();
-      } else {
-        toast.error('Try Again');
-        console.log('Could not submit reply');
-      }
-    } catch (error) {
-      console.log(error);
-    }
   };
 
   const handleSubmit = async (e) => {
@@ -96,32 +69,35 @@ export default function Forums() {
 
     const { forumtitle, forumContent, forumAuth, forumDate, forumReplies } = forum;
 
+    const formData = new FormData();
+    formData.append("forumtitle", forumtitle);
+    formData.append("forumContent", forumContent);
+    formData.append("forumAuth", forumAuth);
+    formData.append("forumDate", forumDate);
+
     try {
       const res = await fetch('https://vitalife-api.onrender.com/forums', {
         method: 'POST',
         mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ forumtitle, forumContent, forumAuth, forumDate, forumReplies }),
+        body: formData,
       });
 
       if (res.status === 200) {
         toast.success('Forum uploaded successfully');
         console.log('Forum uploaded successfully');
-        window.location.reload();
+        // window.location.reload();
       } else {
         toast.error('Try Again');
-        console.log('Could not upload the forum');
+        console.error('Could not upload the forum');
       }
     } catch (error) {
-      console.log(error);
+      console.error('Error uploading the forum:', error);
+      toast.error('An error occurred while uploading the forum');
     }
   };
 
   return (
     <>
-      {/* <Navbar /> */}
       <div className="forums">
         <div className="forums-left">
           <div className="forum-card">
@@ -134,11 +110,7 @@ export default function Forums() {
                 );
               })
               .map((val, key) => (
-                <ForumCard
-                  key={key}
-                  forum={val}
-                  onReplySubmit={(e) => handleReplySubmit(e, val._id)}
-                />
+                <ForumCard key={key} forum={val} />
               ))}
           </div>
         </div>
@@ -196,8 +168,8 @@ export default function Forums() {
                   value={forum.forumDate}
                   className="forumform-inputs"
                 />
+                <button className="forumBtn">Tweet</button>
               </form>
-              <button className="forumBtn">Tweet</button>
             </div>
           )}
         </div>

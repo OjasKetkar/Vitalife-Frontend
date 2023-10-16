@@ -3,7 +3,7 @@ import "../styles/catalogue.css";
 import ProductCard from "../components/ProductCard";
 import NavBar from "../components/Navbar";
 
-const Catalogue = () => {
+const Catalogue = (props) => {
   const [products, setProducts] = useState([]);
 
   const callCataloguePage = async () => {
@@ -34,6 +34,7 @@ const Catalogue = () => {
     <>
     {/* <NavBar/> */}
     <div className="catalogue">
+     <h1 className="catalogue-username">Welcome {props.Username} !</h1>
       <div className="catalogue-grid">
         {products.map((product) => (
           (product.volume > 0 ? <ProductCard key={product._id} product={product}/> : '')

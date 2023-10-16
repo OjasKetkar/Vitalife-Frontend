@@ -54,7 +54,7 @@ export default function Contact() {
                 <h1 className='contactleft-content  '>Or Tell Us More About Your Product</h1>
             </div>
             <div className="contact-right">
-                <h1>Message Us</h1>
+                <h1 className='contactForm-header'>Message Us</h1>
                 <div className="contact-form">
                     <input 
                     name='name'

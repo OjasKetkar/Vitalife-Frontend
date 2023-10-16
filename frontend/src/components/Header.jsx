@@ -40,6 +40,7 @@ function Header() {
           <li className="header-options"><Link to='/forums'  className="nav-options">Forums</Link></li>
           <li className="header-options"><Link to='/nav/sell' className="nav-options">Sell</Link></li>
           <li className="header-options"><Link to='/home' className="nav-options">Contact</Link></li>
+          <li className="header-options"><Link to='/herbsinfo' className="nav-options">Herbs</Link></li>
           <li>
             <button className='btn' onClick={onLogout}>
               <FaSignOutAlt /> Logout 
@@ -48,14 +49,15 @@ function Header() {
           </ul>
           </>
           
-        ) : (
-          <>
+          ) : (
+            <>
           <ul className='header-list'>
           <li className="nav-options"><Link to='/home'className="nav-options">Home</Link></li>
                 <li className="nav-options"><Link to='/nav/catalogue'  className="nav-options">Catalogue</Link></li>
                 <li className="nav-options"><Link to='/forums'  className="nav-options">Forums</Link></li>
                 <li className="nav-options"><Link to='/nav/sell'  className="nav-options">Sell</Link></li>
                 <li className="nav-options"><Link to='/home' className="nav-options">Contact</Link></li>
+            <li className="header-options"><Link to='/herbsinfo' className="nav-options">Herbs</Link></li>
             <li>
               <Link to='/login'>
                 <FaSignInAlt /> Login

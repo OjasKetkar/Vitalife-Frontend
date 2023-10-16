@@ -4,7 +4,7 @@ import '../styles/sell.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function Sell() {
+export default function Sell(props) {
   const [product, setProduct] = useState({
     id: '',
     name: '',
@@ -68,7 +68,7 @@ export default function Sell() {
       {/* <NavBar /> */}
       <div className="sell">
         <h1 className='sell-headline'>
-          {submitted ? 'Your Order' : `Welcome`}
+          {submitted ? 'Your Order' : `Welcome ${props.Username}`}
         </h1>
         {submitted ?
           <div className="sell-receipt">

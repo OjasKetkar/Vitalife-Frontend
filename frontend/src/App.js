@@ -38,10 +38,11 @@ function App() {
             <Route path='/' element={<Hero />} />
             <Route path='/nav/catalogue' element={<Dashboard type="catalogue"/>} />
             <Route path='/nav/sell' element={<Dashboard type="sell"/>} />
+            <Route path='/forums' element={<Dashboard type="forums"/>} />
             <Route path='/home' element={<Hero />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
-            <Route path='/forums' element={<Forums />} />
+            {/* <Route path='/forums' element={<Forums />} /> */}
             <Route path='/herbsinfo' element={<ProInfo />} />
 
           </Routes>
