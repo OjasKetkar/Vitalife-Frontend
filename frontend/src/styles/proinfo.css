@@ -13,7 +13,7 @@ h1 {
 }
 
 /* Layout */
-.page {
+.herbspage {
   width: 100vw;
   height: 100vh;
   min-height: 43.75em;
@@ -102,6 +102,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   transition: transform 0.3s, opacity 0.2s;
+  margin: 0;
 }
 
 .card.hidden {
@@ -110,6 +111,7 @@ h1 {
   color: #fff;
   opacity: 0;
   transition: color 0.5s, background-color 0.5s, transform 1s, opacity 0.2s 0.4s;
+  width: 10%;
 
   h1 {
     color: #fff;
@@ -118,11 +120,8 @@ h1 {
 }
 
 /* Add a media query for screens with a maximum width of 768px */
-@media only screen and(max-width: 768px) {
-  .cards-container{
+@media only screen and(max-width:376px) {
+  .herbspage{
     display: none;
   }
-  .page{
-   display: none;
- }
 }

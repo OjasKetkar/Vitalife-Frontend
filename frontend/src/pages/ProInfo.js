@@ -37,7 +37,7 @@ const ProInfo = () => {
   
 
   return (
-    <section className="page">
+    <section className="herbspage">
       <section className="cards-container">
         {data.herbs.map((herb) => (
           <div key={herb.id} id={herb.id} className={`card ${activeTab === herb.id ? 'card--current' : 'hidden'}`} style={{ backgroundImage: `url(https://res.cloudinary.com/dfot3xc1n/image/upload/v1697124258/vitalife_images/${herb.id}.jpg)` }}>

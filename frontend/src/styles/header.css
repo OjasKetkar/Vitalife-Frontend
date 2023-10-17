@@ -1,43 +1,147 @@
 .header{
-    margin: 0 0;
-}
-
-
-.nav-left{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 1% 0 1% 0;
-    width: 90%;
-}
-
-.mainname{
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.mainlogo{
+    justify-content: space-between;
     margin: 0;
 }
 
+.mainlogo{
+    display: flex;
+    width: 70%;
+}
+
+.sidebarMenu{
+    display: none;
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.mainname{
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
 .header-right{
-    margin-right: 8%;
-    width: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: -5%;
+}
+
+.header-options{
+    margin-right: 5%;
+    font-weight: bold;   
+}
+
+.header-options:hover{
+    cursor: pointer;
+    color: green;
 }
 
 .header-list{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 120%;
-    /* background-color: green; */
+    justify-content: center;
+    /* margin-right: 5%; */
+    padding: 0;
+    width: 100%;
+    margin: 0;
 }
 
-@media only screen and (max-width:768px){
+.sidebarMenu{
+    display: none;
+}
+
+.headerBtn{
+    padding: 0.625em  1.25em;
+  border: 0.0625em solid #000;
+  border-radius: 0.3125em;
+  background: #000;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerbuttons{
+    margin-left: 2%;
+}
+
+@media only screen and (max-width:960px){
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mainlogo{
+        width: 15%;
+    }
+
+    .sidebarMenu{
+        display: flex;
+        width: 10%;
+    }
+
     .header-list{
         display: none;
     }
-    .menu{
+
+    .header-right{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-right: 5%;
+    }
+}
+@media only screen and (max-width:376px){
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mainlogo{
+        width: 8%;
+    }
+
+    .sidebarMenu{
+        display: flex;
+        width: 40%;
+    }
+
+    .header-list{
         display: none;
     }
+
+    .header-right{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-right: 5%;
+    }
+}
+
+
+@media only screen and (max-width:480px){
+    .mainlogo{
+        width: 10%;
+    }
+
+    .sidebarMenu{
+        display: flex;
+        width: 20%;
+    }
+
 }
