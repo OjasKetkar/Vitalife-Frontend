@@ -85,7 +85,7 @@ h1 {
 }
 
 .herb-content{
-  color: rgb(179, 179, 179);
+  color: rgb(118, 207, 174);
   text-align: justify;
   font-size: 1.3em;
 }
@@ -104,6 +104,10 @@ h1 {
   transition: transform 0.3s, opacity 0.2s;
   margin: 0;
 }
+
+/* .card img {
+    opacity: 0.5;
+} */
 
 .card.hidden {
   z-index: 100;

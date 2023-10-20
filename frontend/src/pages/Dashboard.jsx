@@ -6,6 +6,10 @@ import { getGoals, reset } from '../features/goals/goalSlice'
 import Catalogue from './Catalogue.js'
 import Sell from './Sell.js'
 import Forums from './Forums'
+import SellerRegister from './auth-pages/SellerRegister'
+import SellerSignin from './auth-pages/SellerSignin'
+import BuyerRegister from './auth-pages/BuyerRegister'
+import BuyerSignin from './auth-pages/BuyerSignin'
 
 function Dashboard({type}) {
   const navigate = useNavigate()
@@ -49,6 +53,10 @@ function Dashboard({type}) {
         {type === "catalogue" ? <Catalogue Username={user ? user.name : null} /> : null}
         {type === "sell" ? <Sell Username={user ? user.name : null} /> : null}
         {type === "forums" ? <Forums LoggedIn={!!user} /> : null}
+        {type === "registerSeller" ? <SellerRegister LoggedIn={!!user} /> : null}
+        {type === "signinSeller" ? <SellerSignin LoggedIn={!!user} /> : null}
+        {type === "catalogueRegister" ? <BuyerRegister LoggedIn={!!user} /> : null}
+        {type === "catalogueSignin" ? <BuyerSignin LoggedIn={!!user} /> : null}
 
 
 

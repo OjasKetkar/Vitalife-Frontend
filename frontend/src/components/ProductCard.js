@@ -80,10 +80,10 @@ const LoginPopup = ({ onClose, onLoginSuccess }) => {
 const BillPopup = ({ productName, quantity, price, onClose }) => {
   return (
     <div className="bill-popup">
-      <h1>Total Bill generated: </h1>
-      <h3 className="billpopup-details">Product Name: {productName}</h3>
-      <h3 className="billpopup-details">Quantity: {quantity}</h3>
-      <h3>Total Amount: Rs.{quantity * price}</h3>
+      <h1 className="billpopup-details">Total Bill generated: </h1>
+      <h3 className="billpopup-detail">Product Name: {productName}</h3>
+      <h3 className="billpopup-detail">Quantity: {quantity}</h3>
+      <h3 className="billpopup-detail">Total Amount: Rs.{quantity * price}</h3>
       <button onClick={onClose} className="billpopupBtn">Close</button>
     </div>
   );

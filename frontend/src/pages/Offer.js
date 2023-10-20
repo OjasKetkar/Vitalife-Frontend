@@ -7,29 +7,30 @@ export default function Offer() {
 
     const [offer,setOffer] = useState([]);
 
-    const callOfferPage = async () => {
-        try{
-            const res = await fetch("https://vitalife-api.onrender.com/getAllproducts/", {
-                method : "GET",
-                headers : {
-                    "Content-Type" : "application/json",
-                },
-            });
+      const callOfferPage = async () => {
+          try{
+              const res = await fetch("https://vitalife-api.onrender.com/getAllproducts/", {
+                  method : "GET",
+                  mode : "cors",
+                  headers : {
+                      "Content-Type" : "application/json",
+                  },
+              });
 
-            const data = await res.json();
-            setOffer(data.data);
-            if(res.status !== 200){
-                const error = new Error(res.error);
-                throw error;
-            }
-        } catch (error){
-            console.log(error)
-        }
-    }
+              const data = await res.json();
+              setOffer(data.data);
+              if(res.status !== 200){
+                  const error = new Error(res.error);
+                  throw error;
+              }
+          } catch (error){
+              console.log(error)
+          }
+      }
 
-    useEffect(() => {
-        callOfferPage();
-    },[]);
+      useEffect(() => {
+          callOfferPage();
+      },[]);
 
     return(
         <div className="offer">

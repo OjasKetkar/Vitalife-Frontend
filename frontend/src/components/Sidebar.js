@@ -36,6 +36,9 @@ export default function Sidebar() {
       <Link to="/home" className="sidebar-options">
         Contact
       </Link>
+      <Link to="/herbsinfo" className="sidebar-options">
+      Herbs
+      </Link>
 
       {user ? (
         <button className="sidebarBtn" onClick={onLogout}>

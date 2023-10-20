@@ -29,8 +29,6 @@ export default function Hero() {
   return (
     <div className="hero">
       <div className="hero-navbar">
-        {/* {showNav? <NavBar/> : ""} */}
-        {/* <NavBar/> */}
       </div>
 
       <div className="hero-section hero-homepage">

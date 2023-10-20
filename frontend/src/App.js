@@ -6,7 +6,6 @@ import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Hero from './pages/Hero'
-import Forums from './pages/Forums'
 import ProInfo from './pages/ProInfo'
 import { useEffect, useState } from 'react'
 
@@ -44,6 +43,12 @@ function App() {
             <Route path='/register' element={<Register />} />
             {/* <Route path='/forums' element={<Forums />} /> */}
             <Route path='/herbsinfo' element={<ProInfo />} />
+            {/* <Route path='/catalogue/register' element={<BuyerRegister />} /> */}
+            <Route path='/catalogue/register' element={<Dashboard type = "catalogueRegister" />} />
+            {/* <Route path='/catalogue/signin' element={<BuyerSignin />} /> */}
+            <Route path='/catalogue/signin' element={<Dashboard type = "catalogueSignin" />} />
+            <Route path='/seller/register' element={<Dashboard type="registerSeller" />} />
+            <Route path='/seller/signin' element={<Dashboard type="signinSeller"/>} />
 
           </Routes>
         </div>

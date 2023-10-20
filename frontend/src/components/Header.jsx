@@ -61,7 +61,7 @@ function Header() {
           <li className="header-options"><Link to='/home'className="header-options">Home</Link></li>
           <li className="header-options"><Link to='/nav/catalogue'  className="header-options">Catalogue</Link></li>
           <li className="header-options"><Link to='/forums'  className="header-options">Forums</Link></li>
-          <li className="header-options"><Link to='/nav/sell' className="header-options">Sell</Link></li>
+          <li className="header-options"><Link to='/seller/signin' className="header-options">Sell</Link></li>
           <li className="header-options"><Link to='/home' className="header-options">Contact</Link></li>
           <li className="header-options"><Link to='/herbsinfo' className="header-options">Herbs</Link></li>
           <li>
